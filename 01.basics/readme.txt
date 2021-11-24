@@ -1,6 +1,15 @@
 React Practices - Basics
 
+//
+npm install -g create-react-app
+//확인
+npx create-react-app
+npx create-react-app ex00.cra
+
 ex00 : create-react-app(cra) 으로 애플리케이션 빨리 만들어 보기
+
+npm init -y
+npm i -D express
 ex01 : 전통적인 DOM API 기반의 애플리케이션 만들기
 ex02 : 애플리케이션 분리 1
 ex03 : 애플리케이션 분리 2 : ES6 모듈 시스템
@@ -10,6 +19,6 @@ ex04 : 번들링 --> webpack(공부 필요)
 ex05 : React (API 기반) 애플리케이션 리팩토링 
 ex06 : React JSX 기반 애플리케이션 리팩토링 : babel(transpiling)
        babel-practices
-ex07 : ex00 Reconfiguration
+ex07 : ex00 Reconfigurationr
 ex08 : JSX Tutorial
 

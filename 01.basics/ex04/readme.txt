@@ -10,3 +10,8 @@ ex04:애플리케이션 번들링(bundling)
    4)난독화/압축(Uglyfy) 작업
    5)최종적으로 번들링 작업
 5. 자바스크립트 뿐만 아니라 다양한 assets(image, css, font)들도 모듈로 취급을 한다.
+6. 설치
+    npm i -D webpack webpack-cli
+   버전 확인 하기
+    npm .\node_modules\.bin\webpack --version
+    npx webpack --version
