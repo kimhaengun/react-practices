@@ -5,9 +5,9 @@ export default class FoodList extends Component{
     render(){
         return(
         <ul>
-            <ListItem/>
-            <ListItem/>
-            <ListItem/>
+            <ListItem name = 'Egg' quantity='10'/>
+            <ListItem name = 'Milk' quantity='20'/>
+            <ListItem name = 'Bread' quantity='5'/>
         </ul>
         )
     }

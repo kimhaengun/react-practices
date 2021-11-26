@@ -4,7 +4,7 @@ export default class ListItem extends Component{
     render(){
         return(
         <ul>
-            <li>Bread : 10</li>
+            <li>{this.props.name} : {this.props.quantity}</li>
         </ul>
         )
     }
