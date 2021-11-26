@@ -1,12 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import FoodList from './FoodList';
 
-export default class App extends Component {
-    constructor(){
-    
-        super(arguments);
-
-    this.foods = [{
+export default function() {
+    const foods = [{
         no: 1,
         name: 'Bread',
         quantity: 10
@@ -21,12 +17,10 @@ export default class App extends Component {
         quantity: 30
 
     }];
-    }
-    render(){
+
     return (
         <div id='App'>
             <FoodList foods={ foods }/>
         </div>
-    );
-    }
+    )
 } 

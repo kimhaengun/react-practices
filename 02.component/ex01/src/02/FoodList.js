@@ -20,4 +20,4 @@ export default class FoodList extends Component {
             </ul>
         )
     }
-} 
+}

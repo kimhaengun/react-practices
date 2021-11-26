@@ -20,7 +20,7 @@ ex01 Property
 
 설치
 $ npm i -D webpack webpack-cli webpack-dev-server babel-loader style-loader css-loader sass-loader node-sass @babel/core @babel/cli @babel/preset-env @babel/preset-react
-$ npm i react react-dom
+$ npm i react react-dom prop-type
 
 설정 :
 bable: babel.config.json
