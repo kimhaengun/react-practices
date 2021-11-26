@@ -8,6 +8,7 @@ export default class FoodList extends Component{
             <ListItem name = 'Egg' quantity='10'/>
             <ListItem name = 'Milk' quantity='20'/>
             <ListItem name = 'Bread' quantity='5'/>
+            <ListItem name = 'Crrot' quantity='30'/>
         </ul>
         )
     }
