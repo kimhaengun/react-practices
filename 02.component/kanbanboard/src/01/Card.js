@@ -1,4 +1,5 @@
 import React from 'react';
+import TaskList from './TaskList';
 
 export default function({title, description, tasks}) {
     return (
@@ -8,11 +9,8 @@ export default function({title, description, tasks}) {
                 {description}
             </div>
 
-
-            <div className='TaskList'>
-                <ul>
-                </ul>
-            </div>
+            <TaskList tasks={tasks} />
+            
         </div>        
     );
 }
