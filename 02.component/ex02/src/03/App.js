@@ -4,7 +4,7 @@ export default function() {
  
   return (
         <div id='App'>
-          <h1 className={'Header'}>{`Noraml CSS(css - loader opstion : modules : false)`}</h1>
+          <h1 className={'Header'}>{`Noraml CSS(css - loader opstion : modules : true)`}</h1>
         </div>
     )
 }

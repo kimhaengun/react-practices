@@ -7,13 +7,14 @@ ex02 component - Component Styling(Working with UI)
     Noraml CSS (css loader options : {Modules : false})
 
 03.
-    Normal CSS
+    Normal CSS (css loader options : {Modules : true})
 
 04.
-    CSS Modules
+    CSS Modules (css loader options : {Modules : true})
 
 05.
     SASS & SCSS
+    -CSS in JS(Styled Component), Less & Styleable
 
 06.
     Font Awesome
@@ -24,4 +25,4 @@ ex02 component - Component Styling(Working with UI)
 08.
     Material UI
 
-실행 --> npm run debug src=(01|02|03|04|...) modues={false|true}
+실행 --> npm run debug src=(01|02|03|04|...) css-modules={false|true} // default 값은 true
