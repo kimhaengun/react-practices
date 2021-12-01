@@ -7,24 +7,32 @@ export default class extends Component {
             val: this.props.begin
         }
     }
-    onClickButton(e){
-                this.setState({
-                val: this.state.val + this.state.step
-            })
+
+    onClickPlusButton(e) {
+        // this.state.value = this.state.value + this.props.step;
+        this.setState({
+            val: this.state.val + this.props.step
+        })
+    }
+
+    onClickMinButton(e){
+        this.setState({
+            val: this.state.val-this.props.step
+        })
     }
 
     render() {
         return (
             <div>
-                <button onClick={this.onClickButton.bind(this)}>
+                <button onClick={this.onClickPlusButton.bind(this)}>
                     <strong>+</strong>
                 </button>
                 {' '}
                 <span>{this.state.val}</span>
-                <strong>+</strong>
-                <button>
-                <strong>-</strong>    
-                </button>   
+                {' '}
+                <button onClick={this.onClickMinButton.bind(this)}>
+                    <strong>-</strong>
+                </button>                    
             </div>
         );
     }
