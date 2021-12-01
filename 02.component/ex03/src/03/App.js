@@ -21,18 +21,18 @@ export default function App() {
             <form
                 name='addForm'
                 method='post'
-                action='/do/not/go'
-                >
+                action='/do/not/go'>
                 <input
                     type='text'
                     name='message'
                     placeholder='메세지를 입력 하세요'
-                    />
+                    onChange={onChangeMessageInput}/>
                 <br/>
                 <br/>
                 <input
                     type='submit'
-                    value='등록' />
+                    value='등록' 
+                    onClick={onAddFormSubmit}/>
             </form>
         </Fragment>
     );
