@@ -1,16 +1,43 @@
 import React, { useState } from 'react';
 import './assets/Form.css';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faTimesCircle, faCheckCircle} from '@fortawesome/free-solid-svg-icons';
 
 export default function Form() {
+    //상태 생성
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [validEmail,setValidEmail] = useState(false);
 
+
+    const onChangeInputName = (e) =>{
+        // setName(e.target.value);
+        // 10자 제한하기
+        setName(e.target.value.substr(0,10));
+    };
+
+    const onChangeInputEmail = (e) =>{
+        setEmail(e.target.value);
+
+        const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        setValidEmail(re.test(e.target.value));
+    };
 
     return (
         <form id="joinForm" name="joinForm" method="post" action="/do/not/post">
             <label htmlFor="name">이름</label>
-            <input id="name" name="name" type="text" value={ "" } />
+            <input id="name" name="name" type="text" value={ name } 
+            onChange = {onChangeInputName}/>
 
             <label htmlFor="email">이메일</label>
-            <input id="email" name="email" type="text" value={ "" }/>
+            <input id="email" name="email" type="text" value={ email }
+            onChange = {onChangeInputEmail}/>
+            {
+                email === '' ? null : 
+                validEmail ? 
+            <FontAwesomeIcon icon={faCheckCircle} style={ {marginLeft:5, fontSize:16, color:'blue'} } /> :
+            <FontAwesomeIcon icon={faTimesCircle} style={ {marginLeft:5, fontSize:16, color:'red'} }/>
+            }
 
             <label htmlFor="password">패스워드</label>
             <input id="password" name="password" type="password" value={ "" } />
