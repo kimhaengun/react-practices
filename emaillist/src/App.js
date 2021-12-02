@@ -10,14 +10,13 @@ export default function() {
 
     const [keyword,setKeyword] = useState('');
     const notifyKeywordChanged = (keyword) => {
-        console.log(keyword);
         setKeyword(keyword);
     }
 
     return (
         <div className={'App'}>0
             <RegisterForm/>
-            <Searchbar callback={notifyKeywordChanged}/>
+            <Searchbar keyword={keyword} callback={notifyKeywordChanged}/>
             <Emaillist keyword={keyword} emails={data}/>
         </div>
     )
