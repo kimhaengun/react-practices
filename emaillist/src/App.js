@@ -1,9 +1,15 @@
 import React from 'react';
+import './assets/scss/App.scss';
+import Emaillist from './Emaillist';
+import RegisterForm from './RegisterForm';
+import Searchbar from './Searchbar';
 
 export default function() {
     return (
-        <div id='App'>
-          <h1>Email</h1>
+        <div className={'App'}>
+            <RegisterForm/>
+            <Searchbar/>
+            <Emaillist/>
         </div>
     )
 }
