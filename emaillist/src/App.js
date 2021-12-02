@@ -4,12 +4,14 @@ import Emaillist from './Emaillist';
 import RegisterForm from './RegisterForm';
 import Searchbar from './Searchbar';
 
+import data from './assets/json/data.json';
+
 export default function() {
     return (
         <div className={'App'}>
             <RegisterForm/>
             <Searchbar/>
-            <Emaillist/>
+            <Emaillist emails={data}/>
         </div>
     )
 }
