@@ -25,8 +25,8 @@ export default function Hook({ color }) {
      *     : 관심 분리
      */
     useEffect(() => {
-        console.log('Update Color(DB) Using APIs...');
-    }, [boxColor]);
+        console.log('Update title');
+    }, [title]);
 
     /**
      *  4. Alternative 02: componentDidMount & componentWillUnmount

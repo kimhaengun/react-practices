@@ -11,7 +11,7 @@ export default class App extends Component {
         return (
             <div className='clock-display'>
                 <h2>ex05 - Component LifeCycle Practice</h2>
-                    <Clock />
+                    <Clock hours={'03'} minutes={'42'} seconds={'21'} session={'am'}/>
             </div>
         );
     }
