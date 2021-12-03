@@ -11,13 +11,40 @@ export default function MessageList({messages}) {
     const refForm = useRef(null);
     const [modalData, setModalData] = useState({isOpen: false});
 
-    const handleSubmit = (e) => {
-        e.preventDefault();        
-        console.log("삭제!!!",modalData);
+    const handleSubmit = async (e) => {
+        e.preventDefault();       
+        try{
+            if(e.target.password.value === ''){
+            return;
+        }
+            // const response = await fetch(`/api/${modalData.messageNo}`,{
+            //     method:'delete',
+            //     header:{
+            //         'Content-Type' : '',
+            //         'Accept' : 'application/json'
+            //     },
+            //     body:
+            //         JSON.stringify({password: modalData.password})
+            // });
+            // if(!response.ok){
+            //     throw `${response.status} ${response.statusText}`
+            // }
+            // //데이터 
+            // const jsonResult = response.json;
+            
+            //비밀번호가 틀린 경우 - jsonResult.data = null
+            setModalData({},Object.assign(modalData), {label:'비밀번호가 일치하지 않습니다.', password: ''});
+            //잘 삭제가 된 경우 - jsonResult.data = 10
+
+            console.log("삭제!!!",modalData);
+        }catch(error){
+            console.log(error);
+        }
     }
 
     const notifyDeleteMessage = (no) => {
         setModalData({
+            label: '작성시 입력했던 비밀번호를 입력 하세요.',
             isOpen: true,
             messageNo : no,
             password: ''
@@ -46,7 +73,7 @@ export default function MessageList({messages}) {
                         ref={refForm}
                         className={styles.DeleteForm}
                         onSubmit={handleSubmit}>
-                        <label>작성시 입력했던 비밀번호를 입력 하세요.</label>
+                        <label>{modalData.label}</label>
                         <input
                             type={'password'}
                             autoComplete={'off'}
