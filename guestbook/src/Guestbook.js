@@ -1,14 +1,22 @@
-import React from 'react';
-import GuestbookForm from './GuestbookForm';
-import GuestbookView from './GuestbookView';
-import './assets/css/styles.css';
+import React, {useState} from 'react';
+import WriteForm from './WriteForm';
+import MessageList from './MessageList';
+import styles from './assets/scss/Guestbook.scss';
 
-export default function() {
-    return (  
-      <div className='Guestbook'>
-          <h1>방명록</h1>
-          <GuestbookForm />
-          <GuestbookView/>
-      </div>
-    )
+import data from './assets/json/data.json';
+
+export default function Guestbook() {
+    const [messages, setMessages] = useState(data);
+
+    return (
+        <div className={styles.ScrollOuter}>
+            <div>
+                <div className={styles.Guestbook}>
+                    <h1>방명록</h1>
+                    <WriteForm/>
+                    <MessageList messages={messages}/>
+                </div>
+            </div>
+        </div>
+    );
 }
