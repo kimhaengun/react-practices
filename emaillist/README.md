@@ -68,21 +68,26 @@ Access to fetch at 'http://localhost:8888/api' from origin 'http://localhost:999
         ---------------->
             fetch()
    </pre>
+   조건 : 
+   1) GET,HEAD, POST 중의 하나의 method를 쓰는 경우
+   2) accept, accept-language, Content-Type 등의 헤더만 사용하는 경우
+   3) Content-type 헤더에 application/x-www-form-urlencoded, multipart/for-data, text/plain 인 경우
 
 2. preflight request
    <pre>
       JS                 boewser              server
         ---------------->      --------------->
             fetch()                 OPTIONS /api
+                                    Access-Control-Allow-Origin : GET
                               <----------------
                                     200 OK
-                                    Access-Control-Allow-origin
+                                    Access-Control-Request-Origin : 'http://localhost:9999'
 
                               ---------------->
                                     GET /api
                               <---------------
                                     200 ok
-                                    Access-Control-Allow-origin
+                                    Access-Control-Allow-Origin
                               =====================
                                     JSON - "{......}"
 respons<----------------                                    

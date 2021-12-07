@@ -19,6 +19,8 @@ export default function() {
         const response =await fetch('http://localhost:8888/api',{
             method:'get',
             mode:'cors', //no-cors, cors, same-origin
+            credentials:'same-origin', //include, omit, same-origin
+            cache:'no-cache', //no-cache, reload, force-cache, default*
             headers:{
                 'Content-Type': 'application/json', //cf.application/x-www-form-urlencoded
                 'Accept': 'application/json' //cf.text/html
@@ -33,6 +35,7 @@ export default function() {
         }
         //결과를 json으로 변환
         const jsonResult = await response.json();
+        console.log(jsonResult);
 
         //통신은 했지만 결과값이 success가 아니면 
         if(jsonResult.result !== 'success'){
