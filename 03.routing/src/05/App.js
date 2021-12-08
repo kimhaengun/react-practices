@@ -4,7 +4,7 @@ import {Routes, Route} from 'react-router';
 import Main from "./component/Main";
 import Gallery from "./component/Gallery";
 import Guestbook from "./component/Guestbook";
-import About from "./component/About";
+import About from "../06/component/About";
 import './assets/scss/App.scss'
 
 export default function App() {
